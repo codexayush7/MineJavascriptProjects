@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #f0f8ff;
+    --clock-bg: #ffffff;
+    --text-color: #2c3e50;
+    --accent-color: #3498db;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --control-bg: #f5f5f5;
+    --control-hover: #e0e0e0;
+}
+
+.dark-mode {
+    --bg-color: #0f172a;
+    --clock-bg: #1e293b;
+    --text-color: #e2e8f0;
+    --accent-color: #60a5fa;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --control-bg: #334155;
+    --control-hover: #475569;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.clock {
+    width: 380px;
+    background-color: var(--clock-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    overflow: hidden;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.clock:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px var(--shadow-color);
+}
+
+.clock-face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.time {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.date {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-bottom: 5px;
+}
+
+.period {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: var(--control-bg);
+    color: var(--text-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+button:hover {
+    background-color: var(--control-hover);
+    transform: translateY(-2px);
+}
+
+button i {
+    font-size: 1rem;
+}
+
+@media (max-width: 420px) {
+    .clock {
+        width: 320px;
+        padding: 20px;
+    }
+
+    .time {
+        font-size: 2.8rem;
+    }
+
+    .date {
+        font-size: 0.9rem;
+    }
+
+    .period {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Digital Clock</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="clock">
+        <div class="clock-face">
+            <div id="time" class="time">00:00:00</div>
+            <div id="date" class="date">Monday, January 1</div>
+            <div id="period" class="period">AM</div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="toggle-dark-mode" title="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button id="toggle-seconds" title="Toggle Seconds">
+            <i class="fas fa-stopwatch"></i>
+        </button>
+        <button id="toggle-24hour" title="Toggle 24-Hour Format">
+            <i class="fas fa-clock"></i>
+        </button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
